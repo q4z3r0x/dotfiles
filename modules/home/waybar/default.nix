@@ -225,16 +225,16 @@
 
         /* White MPRIS Background */
         #mpris {
-          background-color: #d0c0ae;
-          color: #000;
+          background-color: #879D80;
+          color: #424141;
         }
 
         /* EDGE MARGINS */
         #clock {
           margin-left: 10px;
           margin-right: 4px;
-          background-color: #d0c0ae;
-          color: #000;
+          background-color: #879D80;
+          color: #424141;
         }
         #battery {
           margin-right: 10px;
