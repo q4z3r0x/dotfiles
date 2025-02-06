@@ -225,7 +225,7 @@
 
         /* White MPRIS Background */
         #mpris {
-          background-color: #fff;
+          background-color: #d0c0ae;
           color: #000;
         }
 
@@ -233,7 +233,7 @@
         #clock {
           margin-left: 10px;
           margin-right: 4px;
-          background-color: #fff;
+          background-color: #d0c0ae;
           color: #000;
         }
         #battery {
