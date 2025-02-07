@@ -17,6 +17,8 @@
     # teams-for-linux # Team Communication
     loupe # Image Viewer
 
+    arnis
+
     # Development
     sqlitebrowser # SQLite Database Browser
   ];
