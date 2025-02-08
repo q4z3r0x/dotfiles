@@ -43,7 +43,7 @@
 
         # ESP32
         vscode-marketplace.platformio.platformio-ide
-				vscode-marketplace.ms-vscode.cpptools # Platform IO Dependancy
+				vscode-extensions.ms-vscode.cpptools # Platform IO Dependancy
 
         # Other
         vscode-marketplace.naumovs.color-highlight
