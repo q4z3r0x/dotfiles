@@ -4,6 +4,7 @@
   fetchFromGitHub,
   versionCheckHook,
   nix-update-script,
+  pkg-config,
 }:
 rustPlatform.buildRustPackage rec {
   pname = "arnis";
