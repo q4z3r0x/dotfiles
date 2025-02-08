@@ -53,6 +53,12 @@
     };
   };
 
+  # Required for PlatformIO
+  services.udev.packages = [ 
+    pkgs.platformio-core
+    pkgs.openocd
+  ];
+
   boot = {
     kernelParams = [
       # Enables the pixels horizontal of the notch.
