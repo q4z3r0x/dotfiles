@@ -5,6 +5,7 @@
   versionCheckHook,
   nix-update-script,
   pkg-config,
+  glib,
 }:
 rustPlatform.buildRustPackage rec {
   pname = "arnis";
@@ -19,10 +20,8 @@ rustPlatform.buildRustPackage rec {
 
   cargoHash = "sha256-w5XFeyZ+1on7ZkCwROZhbKZCVbSxkVzqIe0/yvJzUgQ=";
 
-  nativeInstallCheckInputs = [ versionCheckHook ];
-  doInstallCheck = true;
-  #opening ui (bug)
-  #versionCheckProgramArg = [ "--version" ];
+  nativeBuildInputs = [ pkg-config versionCheckHook ];
+  buildInputs = [ glib ];
 
   passthru.updateScript = nix-update-script { };
 
