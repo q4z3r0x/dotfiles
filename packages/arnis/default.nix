@@ -4,6 +4,10 @@
   fetchFromGitHub,
   pkg-config,
   autoPatchelfHook,
+  openssl,
+  zlib,
+  glib,
+  gtk3,
 }:
 rustPlatform.buildRustPackage rec {
   pname = "arnis";
@@ -19,6 +23,9 @@ rustPlatform.buildRustPackage rec {
   cargoHash = "sha256-w5XFeyZ+1on7ZkCwROZhbKZCVbSxkVzqIe0/yvJzUgQ=";
 
   nativeBuildInputs = [ pkg-config autoPatchelfHook ];
+
+  # Common system libraries Rust projects often depend on
+  buildInputs = [ openssl zlib glib gtk3 ];
 
   # Enable autoPatchelf for automatic library linking
   dontPatchELF = false;
