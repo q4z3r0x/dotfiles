@@ -6,6 +6,11 @@
   nix-update-script,
   pkg-config,
   glib,
+  cairo,
+  pango,
+  gdk-pixbuf,
+  atk,
+  gtk3,
 }:
 rustPlatform.buildRustPackage rec {
   pname = "arnis";
@@ -21,7 +26,7 @@ rustPlatform.buildRustPackage rec {
   cargoHash = "sha256-w5XFeyZ+1on7ZkCwROZhbKZCVbSxkVzqIe0/yvJzUgQ=";
 
   nativeBuildInputs = [ pkg-config versionCheckHook ];
-  buildInputs = [ glib ];
+  buildInputs = [ glib cairo pango gdk-pixbuf atk gtk3 ];
 
   passthru.updateScript = nix-update-script { };
 
