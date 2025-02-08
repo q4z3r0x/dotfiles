@@ -12,13 +12,13 @@
 }:
 rustPlatform.buildRustPackage rec {
   pname = "arnis";
-  version = "2.1.3";
+  version = "2.2.0";
 
   src = fetchFromGitHub {
     owner = "louis-e";
     repo = "arnis";
     tag = "v${version}";
-    hash = "sha256-3Gdrgo6j50ieR0E6q0DeKShHbng9sBjBC0hBAPLsnt0=";
+    hash = "sha256-1f189ajkk4wwbzrx6s394awryxf57559fxkw4sxcfaxmpw1fz2iz";
   };
 
   cargoHash = "sha256-w5XFeyZ+1on7ZkCwROZhbKZCVbSxkVzqIe0/yvJzUgQ=";
