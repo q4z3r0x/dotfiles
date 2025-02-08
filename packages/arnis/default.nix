@@ -2,18 +2,8 @@
   lib,
   rustPlatform,
   fetchFromGitHub,
-  versionCheckHook,
-  nix-update-script,
   pkg-config,
-  glib,
-  cairo,
-  pango,
-  gdk-pixbuf,
-  atk,
-  gtk3,
-  openssl,
-  libsoup_3,
-  webkitgtk,
+  autoPatchelfHook,
 }:
 rustPlatform.buildRustPackage rec {
   pname = "arnis";
@@ -28,13 +18,10 @@ rustPlatform.buildRustPackage rec {
 
   cargoHash = "sha256-w5XFeyZ+1on7ZkCwROZhbKZCVbSxkVzqIe0/yvJzUgQ=";
 
-  nativeBuildInputs = [ pkg-config versionCheckHook ];
-  buildInputs = [ glib cairo pango gdk-pixbuf atk gtk3 openssl libsoup_3 webkitgtk ];
+  nativeBuildInputs = [ pkg-config autoPatchelfHook ];
 
-  # Required for OpenSSL and other libraries to find Nix-provided dependencies
-  PKG_CONFIG_PATH = "${lib.makeSearchPathOutput "dev" "lib/pkgconfig" buildInputs}";
-
-  passthru.updateScript = nix-update-script { };
+  # Enable autoPatchelf for automatic library linking
+  dontPatchELF = false;
 
   meta = {
     description = "Real world location generator for Minecraft Java Edition";
