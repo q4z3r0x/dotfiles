@@ -41,6 +41,9 @@
         # C
         vscode-marketplace.llvm-vs-code-extensions.vscode-clangd
 
+        # ESP32
+        vscode-marketplace.platformio.platformio-ide
+
         # Other
         vscode-marketplace.naumovs.color-highlight
         vscode-marketplace.aaron-bond.better-comments
