@@ -18,7 +18,7 @@ rustPlatform.buildRustPackage rec {
     owner = "louis-e";
     repo = "arnis";
     tag = "v${version}";
-    hash = "sha256-1f189ajkk4wwbzrx6s394awryxf57559fxkw4sxcfaxmpw1fz2iz";
+    hash = "sha256-u5R1b+S99UOeGKudecQF92lIcbm+8aGD1ZlNtd3gmb0=";
   };
 
   cargoHash = "sha256-w5XFeyZ+1on7ZkCwROZhbKZCVbSxkVzqIe0/yvJzUgQ=";
