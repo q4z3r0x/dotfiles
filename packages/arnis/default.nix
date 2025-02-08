@@ -8,6 +8,7 @@
   zlib,
   glib,
   gtk3,
+  webkitgtk_4_1,
 }:
 rustPlatform.buildRustPackage rec {
   pname = "arnis";
@@ -25,7 +26,7 @@ rustPlatform.buildRustPackage rec {
   nativeBuildInputs = [ pkg-config autoPatchelfHook ];
 
   # Common system libraries Rust projects often depend on
-  buildInputs = [ openssl zlib glib gtk3 ];
+  buildInputs = [ openssl zlib glib gtk3 webkitgtk_4_1 ];
 
   # Enable autoPatchelf for automatic library linking
   dontPatchELF = false;
