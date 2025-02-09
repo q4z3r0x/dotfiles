@@ -132,7 +132,7 @@
     # into a seperate module if I decide to use it.
     programs.nix-ld = {
       enable = true;
-      libraries = with pkgs; [ glibc "pkgs.libstdc++" ];
+      libraries = with pkgs; [ glibc libcxx ];
     };
   };
 }
