@@ -3,6 +3,7 @@
   config,
   inputs,
   self,
+  pkgs,
   ...
 }: {
   options.modules.core.enable = lib.mkEnableOption "";
