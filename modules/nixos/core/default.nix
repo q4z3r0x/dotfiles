@@ -127,5 +127,12 @@
 
     # High performance implementation of the dbus specification.
     services.dbus.implementation = "broker";
+
+    # Here for testing purposes, I will move this
+    # into a seperate module if I decide to use it.
+    programs.nix-ld = {
+      enable = true;
+      libraries = with pkgs; [ glibc libstdc++ ];
+    };
   };
 }
