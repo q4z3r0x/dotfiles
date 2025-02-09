@@ -10,7 +10,7 @@
     alex = {
       initialPassword = "xela";
       isNormalUser = true;
-      extraGroups = ["networkmanager" "wheel" "video" "audio"];
+      extraGroups = ["networkmanager" "wheel" "video" "audio" "dialout"];
       shell = pkgs.fish;
     };
   };
@@ -53,11 +53,17 @@
     };
   };
 
-  # Required for PlatformIO
-  services.udev.packages = [ 
-    pkgs.platformio-core
-    pkgs.openocd
-  ];
+  services.udev = {
+		# Required for PlatformIO
+		packages = [ 
+    	pkgs.platformio-core
+    	pkgs.openocd
+  	];
+		# ESP32-CYD2USB Support
+		extraRules = ''
+    	SUBSYSTEM=="tty", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", SYMLINK+="ttyUSB0", MODE="0666", GROUP="dialout"
+  	'';
+	};
 
   boot = {
     kernelParams = [
@@ -68,7 +74,7 @@
       "console=tty3"
       # Disable cursor to stop blinking.
       "vt.global_cursor_default=0"
-      # Wipe the vendor logo earlier.
+      # Wipe the vendor logo earlier in the boot sequence.
       "fbcon=nodefer"
     ];
     initrd.verbose = false;
