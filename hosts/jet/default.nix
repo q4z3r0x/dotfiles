@@ -11,7 +11,7 @@
     alex = {
       initialPassword = "xela";
       isNormalUser = true;
-      extraGroups = ["networkmanager" "wheel" "video" "audio" "dialout"];
+      extraGroups = ["networkmanager" "wheel" "video" "audio" "dialout" "docker"];
       shell = pkgs.fish;
     };
   };
