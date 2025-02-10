@@ -2,6 +2,7 @@
   imports = [
     ../../hardware/jet
     ../../modules/nixos
+    ../../modules/server
   ];
 
   networking.hostName = "jet";
