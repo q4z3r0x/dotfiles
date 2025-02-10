@@ -44,13 +44,15 @@ in {
 				ext.vscode-marketplace.llvm-vs-code-extensions.vscode-clangd
 
 				# ESP32
-				ext.vscode-marketplace.platformio.platformio-ide
-				pkgs.vscode-extensions.ms-vscode.cpptools
+				#ext.vscode-marketplace.platformio.platformio-ide
+				#pkgs.vscode-extensions.ms-vscode.cpptools
 
 				# Other
 				ext.vscode-marketplace.naumovs.color-highlight
 				ext.vscode-marketplace.aaron-bond.better-comments
 				ext.vscode-marketplace.mkhl.direnv
+
+        ext.vscode-marketplace.ms-vscode-remote.remote-containers
 			];
 
 
