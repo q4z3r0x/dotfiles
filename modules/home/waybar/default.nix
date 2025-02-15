@@ -178,7 +178,7 @@
         #workspaces button {
           all: initial; /* Remove GTK theme values (waybar #1351) */
           min-width: 0; /* Fix weird spacing in materia (waybar #450) */
-          padding: 4px 4px;
+          padding: 4px 2px;
           border-radius: 6px;
           color: #606060;
         }
@@ -225,16 +225,16 @@
 
         /* White MPRIS Background */
         #mpris {
-          background-color: #879D80;
-          color: #424141;
+          background-color: #FFFFFF;
+          color: #000000;
         }
 
         /* EDGE MARGINS */
         #clock {
           margin-left: 10px;
           margin-right: 4px;
-          background-color: #879D80;
-          color: #424141;
+          background-color: #FFFFFF;
+          color: #000000;
         }
         #battery {
           margin-right: 10px;
