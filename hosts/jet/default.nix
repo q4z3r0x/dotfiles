@@ -103,6 +103,7 @@
       "--noclear"
     ];
   };
+  programs.hyprland.enable = true;
   environment.loginShellInit = ''
     [[ "$(tty)" == /dev/tty1 ]] && dbus-run-session Hyprland
   '';
